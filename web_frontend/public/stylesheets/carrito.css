@@ -1,0 +1,73 @@
+.container {
+    border: 2px solid rgb(255, 81, 0); 
+    border-radius: 20px; 
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 0 5px black; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+
+
+
+.card-producto {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    border: 2px solid rgb(255, 81, 0); /* Borde naranja */
+    border-radius: 15px; /* Borde más redondeado */
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 0 3px black; /* Bordeado negro */
+}
+
+.card-producto img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+.card-body {
+    padding: 10px;
+    flex: 1;
+    color: black;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.btn-eliminar {
+    align-self: flex-start;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+.btn-cantidad {
+    margin-left: auto;
+    font-size: 0.8rem;
+}
+
+.total-container {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: right;
+    font-weight: bold;
+}
+
+.direccion-entrega {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}

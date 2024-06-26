@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    display: flex;
+    background-color: #f4f4f4; /* Fondo ligeramente gris para un mejor contraste */
+}
+
+.container {
+    text-align: center; /* Centrar el contenido dentro del contenedor */
+    background: #fff;
+    height: 100%;
+    padding: 20px;
+    border-radius: 8px; /* Esquinas redondeadas para un aspecto más amigable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #000 /* Color del texto para el título */
+}
+
+canvas {
+    margin-top: 20px;
+}

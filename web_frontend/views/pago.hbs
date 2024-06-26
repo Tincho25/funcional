@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago de Productos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/stylesheets/pago.css">
+</head>
+<body>
+    <div class="container mt-5 bg-white p-4">
+        <h2 class="text-black">Pago de productos</h2>
+        <div class="text-center">
+            <h3>Monto a Pagar: $<span id="monto"></span></h3>
+            <h4>Ingrese los datos de su tarjeta para continuar:</h4>
+        </div>
+        <form id="paymentForm">
+            <input type="hidden" id="montoHidden" name="monto">
+            <div class="form-group">
+                <label for="nombre">Nombre en la Tarjeta:</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="numero">Número de Tarjeta:</label>
+                <input type="text" placeholder="**** **** **** ****" class="form-control" id="numero" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha de Expiración:</label>
+                <input type="text" class="form-control" id="fecha" placeholder="MM/YY" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" class="form-control" id="cvv" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Pagar</button>
+        </form>
+
+        <div id="mensaje" class="mt-3 text-center" style="display: none;">
+            <h3>Felicidades, has adquirido el producto!</h3>
+            <button id="volverInicio" class="btn btn-secondary mt-3">Volver al Inicio</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const monto = params.get('monto');
+            document.getElementById('monto').textContent = monto;
+            document.getElementById('montoHidden').value = monto;
+        });
+
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Simular proceso de pago
+            setTimeout(function() {
+                document.getElementById('paymentForm').style.display = 'none';
+                document.getElementById('mensaje').style.display = 'block';
+            }, 2000);
+        });
+
+        document.getElementById('volverInicio').addEventListener('click', function() {
+            window.location.href = '/';
+        });
+    </script>
+</body>
+</html>

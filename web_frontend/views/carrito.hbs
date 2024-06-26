@@ -1,0 +1,33 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/stylesheets/carrito.css">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark px-3 flex-column">
+        <div class="container-fluid align-items-center justify-content-between">
+            <a href="/" id="brand-home-button" class="navbar-brand">
+                <img src="static/icons/sporter_logo.png" alt="catalogo" height="70">
+            </a>
+            <div class="d-flex align-items-center">
+                <a href="#" id="logout-btn" class="btn btn-4 btn-sm ml-3">Cerrar Sesión</a>
+                {{#if isNotLogged}}
+                <a href="/signIn" id="login-btn" class="btn btn-4 mt-3 ml-3">Iniciar Sesión</a>
+                <a href="/register" id="register-btn" class="btn btn-4 btn-sm mt-3 ml-3">Registrarse</a>
+                {{/if}}
+            </div>
+        </div>
+    </nav>
+    <link rel="stylesheet" href="/static/stylesheets/navbar.css">
+</head>
+<body>
+    <div class="container mt-5 bg-white p-4">
+        <h2 class="text-black text-center mb-4">Tu carrito 🛒</h2>
+        <div id="carrito" class="row"></div>
+        <div id="total" class="total-container text-black"></div>
+        <div class="text-right mt-3">
+            <a id="pagar-btn" href="#" class="btn btn-primary btn-lg">Pagar</a>
+        </div>
+    </div>
+    <script src="/static/javascripts/carrito.js"></script>
+</body>
+</html>
